@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useAuth } from "@/context/AuthContext";
-import { Home, User, LogOut } from "lucide-react";
+import { Home, User, LogOut, PlusCircle, MessageCircle } from "lucide-react";
 
 export default function Navbar() {
   const { user, loading, logout } = useAuth();
@@ -37,6 +37,14 @@ export default function Navbar() {
                     {user.role === "user" && (
                        <Link href="/broker/register" className="text-sm font-medium text-gray-700 hover:text-blue-600">Become a Broker</Link>
                     )}
+                    {user.role === "user" && (
+                       <Link href="/chat" className="text-sm font-medium text-purple-600 hover:text-purple-800 flex items-center gap-1">
+                          <MessageCircle className="w-4 h-4" /> AI Chat
+                       </Link>
+                    )}
+                    <Link href="/listings/add" className="text-sm font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1 bg-blue-50 px-3 py-1.5 rounded-full">
+                       <PlusCircle className="w-4 h-4" /> Add Listing
+                    </Link>
                     <div className="flex items-center gap-2">
                       <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold overflow-hidden">
                         {user.avatar_url ? (
