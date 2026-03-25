@@ -76,7 +76,7 @@ async def chat(
     )
 
     # Build conversation for Gemini
-    model = genai.GenerativeModel("gemini-1.5-flash")
+    model = genai.GenerativeModel("gemini-2.5-flash")
 
     history = []
     for msg in payload.conversation_history:
