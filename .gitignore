@@ -1,7 +1,48 @@
-__pycache__/
-*.pyc
-instance/*.db
-*.db
-.idea/
+# General
+.DS_Store
+*.log
 .env
-*.pkl
+.env.*
+!.env.example
+*.local
+
+# Frontend (Next.js / Node)
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/dist/
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/pnpm-debug.log*
+frontend/.pnp.*
+frontend/coverage/
+frontend/.vercel
+
+# Backend (Python / FastAPI)
+backend/__pycache__/
+backend/*.py[cod]
+backend/*$py.class
+backend/.pytest_cache/
+backend/venv/
+backend/env/
+backend/.venv/
+backend/pip-log.txt
+backend/pip-delete-this-directory.txt
+backend/.coverage
+backend/htmlcov/
+backend/instance/
+backend/.webassets-cache
+backend/.mypy_cache/
+backend/.ruff_cache/
+backend/celerybeat-schedule
+backend/celerybeat.pid
+
+# OS & IDEs
+.vscode/
+.idea/
+*.swp
+.gemini/
+.DS_Store
+Thumbs.db
